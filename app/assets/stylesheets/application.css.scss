@@ -43,13 +43,15 @@
   font-size: 25px;
   font-weight:900;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  padding-top:13px;
 }
 
 .nav-logo {
-  margin-top:5px;
+  padding-top:7px;
   padding-left:3%;
 
 }
+
 
 .navbar {
   margin-bottom:5px;
@@ -64,5 +66,21 @@
 }
 
 .octicon-beer {
+  color:rgb(234, 235, 142);
+}
+
+.tag-line {
   color:white;
+  font-size:12px;
+  padding-right:2%
+}
+
+.dropdown-menu {
+  background-color:black;
+}
+
+/*ope*/
+
+.back {
+  background-color:white;
 }
