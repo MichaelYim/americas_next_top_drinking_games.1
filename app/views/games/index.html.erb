@@ -1,5 +1,9 @@
 <%- model_class = Game -%>
-
+<br><br><br>
+<div class="pull-right"><%= link_to t('.new', :default => t("helpers.links.new")),
+            new_game_path,
+            :class => 'btn btn-primary' %>
+</div>
 <table class="table table-striped">
   <thead>
     <tr>
@@ -43,6 +47,4 @@
   </tbody>
 </table>
 
-<%= link_to t('.new', :default => t("helpers.links.new")),
-            new_game_path,
-            :class => 'btn btn-primary' %>
+

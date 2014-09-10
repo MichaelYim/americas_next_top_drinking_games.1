@@ -37,12 +37,23 @@
 }
 
 .nav-title {
-  color: #428bca;
-  font-size: 30px;
-  font-family: Impact, Charcoal, sans-serif;
+  color: white;
+  font-size: 25px;
+  font-weight:900;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 .nav-logo {
   margin-top:5px;
 
 }
+
+.navbar {
+  margin-bottom:5px;
+}
+
+.navbar-inverse .navbar-nav li a {
+  color:white;
+}
+
+
