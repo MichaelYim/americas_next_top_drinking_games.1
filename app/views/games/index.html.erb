@@ -1,6 +1,6 @@
 <%- model_class = Game -%>
 <div class="page-header">
-  <h1 class="text-center"><%=t '.title', :default => "Top Drinking Games" %></h1>
+  <!-- <h1 class="text-center"><%=t '.title', :default => "Top Drinking Games" %></h1> -->
 </div>
 <table class="table table-striped">
   <thead>
@@ -9,7 +9,8 @@
       <th><%= model_class.human_attribute_name(:title) %></th>
       <th><%= model_class.human_attribute_name(:strategy) %> (1-10)</th>
       <th><%= model_class.human_attribute_name(:pace) %></th>
-      <th>Submitted</th>
+      <th>Submitted By</th>
+
       <% if signed_in? %>
         <th><%=t '.actions', :default => t("helpers.actions") %></th>
       <% end %>
@@ -25,7 +26,9 @@
         <!--<h4 class="games-list-item"> <td><%= game.description %></td</h4 class="games-list-item">> -->
         <td><h4 class="games-list-item"><%= game.strategy %></h4 class="games-list-item"></td>
         <td><h4 class="games-list-item"><%= game.pace %></h4 class="games-list-item"></td>
-        <td><h4 class="games-list-item"><%=l game.created_at, format: :long %></h4 class="games-list-item"></td>
+        <td><h4 class="games-list-item"><%= User.find(game.user_id).name %></h4 class="games-list-item"></td>
+
+        <!-- <td><h4 class="games-list-item"><%#=l game.created_at, format: :short %></h4 class="games-list-item"></td> -->
         <% if signed_in? %>
           <td><h4 class="games-list-item">
             <%= link_to game_path(game), :class => 'btn btn-xs', :title => "#{ t('.show', :default => t('helpers.links.show')) }" do %>
